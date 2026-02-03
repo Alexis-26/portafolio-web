@@ -23,12 +23,5 @@ item_lista_style = {
 
 # Estilo para los items de redes sociales
 item_redes_style = {
-    "background": "rgba(255, 255, 255, 0.03)",
     "cursor": "pointer",
-    "border": "1px solid transparent",
-    "_hover": {
-        "background": "rgba(56, 189, 248, 0.1)", # Brillo cyan (#38bdf8) muy suave
-        "border_color": "rgba(56, 189, 248, 0.3)", # Borde cyan sutil
-        "transform": "translateY(-2px)",
-    }
 }
