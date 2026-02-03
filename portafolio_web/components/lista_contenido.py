@@ -6,18 +6,22 @@ from portafolio_web.styles.styles import item_lista_style
 
 # Diseño de item de cada uno de los proyectos
 def item_lista(icono:str, titulo:str, descripcion:str, url:str):
-    return rx.box(
-        rx.hstack(
-            rx.icon_button(rx.icon(icono, color=Colores.ICONOS.value), size="4", background="None"),
-            rx.vstack(
-                rx.text(titulo, color=TextColor.BLANCO.value),
-                rx.text(descripcion, color=TextColor.GRIS.value),
-                spacing="1"
+    return rx.link(
+        rx.box(
+            rx.hstack(
+                rx.icon_button(rx.icon(icono, color=Colores.ICONOS.value), size="4", background="None"),
+                rx.vstack(
+                    rx.text(titulo, color=TextColor.BLANCO.value),
+                    rx.text(descripcion, color=TextColor.GRIS.value),
+                    spacing="1"
+                ),
+                align="center"
             ),
-            align="center"
+            style=item_lista_style
         ),
-        on_click=rx.redirect(path=url, is_external=True),
-        style=item_lista_style
+        href=url,
+        is_external=True,
+        underline="none"
     )
 
 # Lista que muestra todos los proyectos

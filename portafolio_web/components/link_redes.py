@@ -5,12 +5,15 @@ from portafolio_web.styles.styles import item_redes_style
 
 # Construccion de icono para red social
 def icono_link(tag:str, url:str):
-    return rx.icon_button(
-        rx.icon(tag=tag),
-        radius="full",
-        size="3",
-        on_click=rx.redirect(path=url, is_external=True),
-        style=item_redes_style
+    return rx.link(
+        rx.icon_button(
+            rx.icon(tag=tag),
+            radius="full",
+            size="3",
+            style=item_redes_style
+        ),
+        href=url,
+        is_external=True
     )
 
 # Lista de redes sociales
